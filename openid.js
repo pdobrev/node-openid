@@ -627,7 +627,8 @@ openid.associate = function(provider, callback, strict, algorithm)
   var params = _generateAssociationRequestParameters(provider.version, algorithm);
   if(!_isDef(algorithm))
   {
-    algorithm = 'DH-SHA256';
+    // algorithm = 'DH-SHA256';
+    algorithm = 'no-encryption-256';
   }
 
   var dh = null;
